@@ -86,7 +86,18 @@ import { Cordova, AwesomeCordovaNativePlugin, Plugin } from '@awesome-cordova-pl
 @Injectable()
 export class Zoom extends AwesomeCordovaNativePlugin {
   /**
-   * Initialize Zoom SDK.
+   * Initialize Zoom SDK with JWT token.
+   *
+   * @param jwtToken    Zoom SDK jwtToken
+   * @returns {Promise<any>}
+   */
+  @Cordova()
+  initializeWithJWT(jwtToken: string): Promise<any> {
+    return;
+  }
+
+    /**
+   * Initialize Zoom SDK 
    *
    * @param appKey    Zoom SDK app key.
    * @param appSecret Zoom SDK app secret.
